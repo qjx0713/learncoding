@@ -2,15 +2,15 @@ package indi.qjx.learnjava.designpattern.pattern.adapter.class_adapter;
 
 public class Client {
     public static void main(String[] args) {
-        //´´½¨¼ÆËã»ú¶ÔÏó
+        //åˆ›å»ºè®¡ç®—æœºå¯¹è±¡
         Computer computer = new Computer();
-        //¶ÁÈ¡SD¿¨ÖĞµÄÊı¾İ
+        //è¯»å–SDå¡ä¸­çš„æ•°æ®
         String msg = computer.readSD(new SDCardImpl());
         System.out.println(msg);
 
         System.out.println("===============");
-        //Ê¹ÓÃ¸ÃµçÄÔ¶ÁÈ¡TF¿¨ÖĞµÄÊı¾İ
-        //¶¨ÒåÊÊÅäÆ÷Àà
+        //ä½¿ç”¨è¯¥ç”µè„‘è¯»å–TFå¡ä¸­çš„æ•°æ®
+        //å®šä¹‰é€‚é…å™¨ç±»
         String msg1 = computer.readSD(new SDAdapterTF());
         System.out.println(msg1);
     }
